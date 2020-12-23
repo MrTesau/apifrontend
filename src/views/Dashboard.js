@@ -11,6 +11,8 @@ import FileUpload from "./ImageUpload.js";
 import ExerciseTracker from "./exerciseTracker.js";
 import UrlShortener from "./urlShortener.js";
 import { cardTitle } from "assets/jss/material-dashboard-pro-react.js";
+//import CardIcon from "components/Card/CardIcon.js";
+//import node from "./node.gif";
 import "./customCss.css";
 const styles = {
   cardTitle,
@@ -26,23 +28,21 @@ const styles = {
     fontSize: "1rem",
   },
   card: {
-    background: "#f9ffea",
+    backgroundColor: "rgba(249,255,234,0.8)",
   },
 };
-
 const useStyles = makeStyles(styles);
 export default function Panels() {
   const classes = useStyles();
   return (
     <div className="page-wrapper">
       <Grid container justify="center" alignItems="center">
-        <GridItem xs={11} md={10}>
+        <GridItem xs={11} md={10} lg={8}>
           <Card className={classes.card}>
             <CardHeader color="success" contact>
-              <div className={classes.typo}>
-                Personal Projects: APIs and Microservices
-              </div>
+              <div className={classes.typo}>API and Microservice Projects</div>
             </CardHeader>
+
             <NavPills
               alignCenter={true}
               color="success"

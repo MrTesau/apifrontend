@@ -13,7 +13,6 @@ const API_URL =
     : "https://travel-log-hazel.vercel.app"; // CHANGE WHEN HOSTING
 
 const useStyles = makeStyles(styles);
-
 export default function RegularForms() {
   const [exerciseFormData, setExerciseFormData] = React.useState({
     userId: "",
@@ -123,7 +122,7 @@ export default function RegularForms() {
       <div className={classes.formWrapper}>
         <div className={classes.formContent}>
           <CustomInput
-            labelText="Register New User"
+            labelText="new user"
             id="name"
             formControlProps={{
               fullWidth: false,

@@ -1,39 +1,17 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import Radio from "@material-ui/core/Radio";
-import Checkbox from "@material-ui/core/Checkbox";
-// @material-ui/icons
-import MailOutline from "@material-ui/icons/MailOutline";
-import Check from "@material-ui/icons/Check";
-import Clear from "@material-ui/icons/Clear";
-import Contacts from "@material-ui/icons/Contacts";
-import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
-// core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
-import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardText from "components/Card/CardText.js";
-import CardIcon from "components/Card/CardIcon.js";
-import CardBody from "components/Card/CardBody.js";
 import styles from "./regularFormsStyle.js";
 import axios from "axios";
-
 const API_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:1337"
-    : "https://travel-log-hazel.vercel.app/api/shorturl/new";
+    : "https://travel-log-hazel.vercel.app/api/shorturl/new"; // CHANGE WHEN HOSTING
 
 //  shortened link: API_URL/api/shorturl/6
-
 const useStyles = makeStyles(styles);
-
 export default function RegularForms() {
   // Form data for creating a new User
   const [userFormData, updateUserFormData] = React.useState({
@@ -46,10 +24,7 @@ export default function RegularForms() {
       [e.target.name]: e.target.value,
     });
   };
-
   const submitUser = (e) => {
-    console.log(userFormData.name);
-
     e.preventDefault();
     axios
       .post(`${API_URL}/api/shorturl/new`, {
@@ -67,15 +42,7 @@ export default function RegularForms() {
   };
   const classes = useStyles();
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "50vh",
-      }}
-    >
+    <div className={classes.urlWrapper}>
       A node built Url Shortener. Enter a URL and a new one will be generated!
       <CustomInput
         labelText="Enter a valid URl"

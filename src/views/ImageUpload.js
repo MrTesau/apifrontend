@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 // core components
 import Button from "components/CustomButtons/Button.js";
 import axios from "axios";
-
 const API_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:1337"
@@ -15,9 +14,6 @@ const API_URL =
             <input id="inputfield" type="file" name="upfile">
             <input id="button" type="submit" value="Upload">
           </form>
-
-
-
 */
 export default function ImageUpload(props) {
   const [file, setFile] = React.useState(null);
@@ -43,7 +39,6 @@ export default function ImageUpload(props) {
     // file is the file/image uploaded
     // in this function you can save the image (file) on form submit
     // you have to call it yourself
-
     const data = new FormData();
     data.append("data", file);
     //console.log(data);
@@ -67,16 +62,7 @@ export default function ImageUpload(props) {
 
   let { addButtonProps, changeButtonProps, removeButtonProps } = props;
   return (
-    <div
-      className="fileinput text-center"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "50vh",
-      }}
-    >
+    <div className="fileinput text-center file-input-wrapper">
       <p>
         Submit a file and you receive it's file metadata name, type, and size in
         bytes within the JSON response. Built with Node.js, Express and multer

@@ -52,6 +52,7 @@ const regularFormsStyle = {
   introDiv: {
     display: "flex",
     flexDirection: "column",
+    textAlign: "center",
   },
   getLogs: {
     display: "flex",
@@ -67,6 +68,13 @@ const regularFormsStyle = {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
+  },
+  urlWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "50vh",
   },
 };
 
