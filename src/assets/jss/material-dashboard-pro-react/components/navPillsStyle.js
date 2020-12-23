@@ -8,41 +8,41 @@ import {
   whiteColor,
   blackColor,
   grayColor,
-  hexToRgb
+  hexToRgb,
 } from "assets/jss/material-dashboard-pro-react.js";
 
-const navPillsStyle = theme => ({
+const navPillsStyle = (theme) => ({
   root: {
     marginTop: "20px",
     paddingLeft: "0",
     marginBottom: "0",
-    overflow: "visible !important"
+    overflow: "visible !important",
   },
   flexContainer: {
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "flex",
-      flexWrap: "wrap"
-    }
+      flexWrap: "wrap",
+    },
   },
   displayNone: {
-    display: "none !important"
+    display: "none !important",
   },
   fixed: {
-    overflow: "visible !important"
+    overflow: "visible !important",
   },
   horizontalDisplay: {
-    display: "block"
+    display: "block",
   },
   pills: {
     float: "left",
     position: "relative",
     display: "block",
-    padding: "10px 15px",
+    padding: "10px 10px",
     color: grayColor[6],
     height: "auto",
     opacity: "1",
     margin: "0 5px",
-    fontSize: "12px",
+    fontSize: "13px",
     maxWidth: "100%",
     minWidth: "100px",
     minHeight: "48px",
@@ -51,28 +51,29 @@ const navPillsStyle = theme => ({
     fontWeight: "500",
     lineHeight: "24px",
     borderRadius: "30px",
-    textTransform: "uppercase",
-    letterSpacing: "initial"
+    textTransform: "none",
+    letterSpacing: "initial",
+    fontFamily: "'Ubuntu', sans-serif",
   },
   pillsWithIcons: {
-    borderRadius: "4px"
+    borderRadius: "4px",
   },
   tabIcon: {
     width: "30px",
     height: "30px",
     display: "block",
-    margin: "15px 0 !important"
+    margin: "15px 0 !important",
   },
   horizontalPills: {
     width: "100%",
     float: "none !important",
     "& + button": {
-      margin: "10px 0"
-    }
+      margin: "10px 0",
+    },
   },
   labelContainer: {
     padding: "0!important",
-    color: "inherit"
+    color: "inherit",
   },
   label: {
     lineHeight: "24px",
@@ -81,10 +82,10 @@ const navPillsStyle = theme => ({
     fontWeight: "500",
     position: "relative",
     display: "block",
-    color: "inherit"
+    color: "inherit",
   },
   contentWrapper: {
-    marginTop: "20px"
+    marginTop: "20px",
   },
   primary: {
     "&,&:hover": {
@@ -95,8 +96,8 @@ const navPillsStyle = theme => ({
         hexToRgb(blackColor) +
         ", 0.14), 0 7px 10px -5px rgba(" +
         hexToRgb(primaryColor[0]) +
-        ", 0.4)"
-    }
+        ", 0.4)",
+    },
   },
   info: {
     "&,&:hover": {
@@ -107,8 +108,8 @@ const navPillsStyle = theme => ({
         hexToRgb(blackColor) +
         ", 0.14), 0 7px 10px -5px rgba(" +
         hexToRgb(successColor[0]) +
-        ", 0.4)"
-    }
+        ", 0.4)",
+    },
   },
   success: {
     "&,&:hover": {
@@ -121,8 +122,8 @@ const navPillsStyle = theme => ({
         hexToRgb(successColor[0]) +
         ", 0.2), 0 1px 5px 0 rgba(" +
         hexToRgb(successColor[0]) +
-        ", 0.12)"
-    }
+        ", 0.12)",
+    },
   },
   warning: {
     "&,&:hover": {
@@ -133,8 +134,8 @@ const navPillsStyle = theme => ({
         hexToRgb(blackColor) +
         ", 0.14), 0 7px 10px -5px rgba(" +
         hexToRgb(warningColor[0]) +
-        ", 0.4)"
-    }
+        ", 0.4)",
+    },
   },
   danger: {
     "&,&:hover": {
@@ -145,8 +146,8 @@ const navPillsStyle = theme => ({
         hexToRgb(blackColor) +
         ", 0.14), 0 7px 10px -5px rgba(" +
         hexToRgb(warningColor[0]) +
-        ", 0.4)"
-    }
+        ", 0.4)",
+    },
   },
   rose: {
     "&,&:hover": {
@@ -157,13 +158,13 @@ const navPillsStyle = theme => ({
         hexToRgb(blackColor) +
         ", 0.14), 0 7px 10px -5px rgba(" +
         hexToRgb(roseColor[0]) +
-        ", 0.4)"
-    }
+        ", 0.4)",
+    },
   },
   alignCenter: {
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 });
 
 export default navPillsStyle;
