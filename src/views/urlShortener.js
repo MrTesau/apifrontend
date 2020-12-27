@@ -5,12 +5,13 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import styles from "./regularFormsStyle.js";
 import axios from "axios";
-const API_URL =
+const API_URL = "https://url-shortener-black.vercel.app";
+/*
   window.location.hostname === "localhost"
-    ? "http://localhost:1337"
-    : "https://travel-log-hazel.vercel.app/api/shorturl/new"; // CHANGE WHEN HOSTING
+    ? "http://localhost:3000"
+    : "https://travel-log-hazel.vercel.app/api/shorturl/new";
+    */
 
-//  shortened link: API_URL/api/shorturl/6
 const useStyles = makeStyles(styles);
 export default function RegularForms() {
   // Form data for creating a new User
@@ -24,6 +25,7 @@ export default function RegularForms() {
       [e.target.name]: e.target.value,
     });
   };
+
   const submitUser = (e) => {
     e.preventDefault();
     axios

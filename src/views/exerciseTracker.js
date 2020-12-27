@@ -7,10 +7,10 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "./regularFormsStyle.js";
 import axios from "axios";
 import Hidden from "@material-ui/core/Hidden";
-const API_URL =
-  window.location.hostname === "localhost"
-    ? "http://localhost:1337"
-    : "https://travel-log-hazel.vercel.app"; // CHANGE WHEN HOSTING
+const API_URL = "https://project-exercisetracker.vercel.app";
+//window.location.hostname === "localhost"
+//? "http://localhost:1337"
+// : "https://travel-log-hazel.vercel.app"; // CHANGE WHEN HOSTING
 
 const useStyles = makeStyles(styles);
 export default function RegularForms() {
