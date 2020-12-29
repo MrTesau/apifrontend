@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 // core components
 import Button from "components/CustomButtons/Button.js";
 import axios from "axios";
-const API_URL =
+const API_URL = "https://flamboyant-elion-7adf74.netlify.app";
+/*
   window.location.hostname === "localhost"
     ? "http://localhost:1337"
     : "https://travel-log-hazel.vercel.app";
-
+*/
 /*
    <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
             <input id="inputfield" type="file" name="upfile">
@@ -43,7 +44,7 @@ export default function ImageUpload(props) {
     data.append("data", file);
     //console.log(data);
 
-    axios.post(`${API_URL}/api/fileanalyse`, data).then((res) => {
+    axios.post(`${API_URL}/.netlify/functions/api`, data).then((res) => {
       // then print response status
       console.log(res);
       setDataDisplay({ ...res.data });

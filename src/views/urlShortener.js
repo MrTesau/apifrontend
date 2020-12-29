@@ -6,11 +6,6 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "./regularFormsStyle.js";
 import axios from "axios";
 const API_URL = "https://url-shortener-black.vercel.app";
-/*
-  window.location.hostname === "localhost"
-    ? "http://localhost:3000"
-    : "https://travel-log-hazel.vercel.app/api/shorturl/new";
-    */
 
 const useStyles = makeStyles(styles);
 export default function RegularForms() {

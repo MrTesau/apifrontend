@@ -7,7 +7,7 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "./regularFormsStyle.js";
 import axios from "axios";
 import Hidden from "@material-ui/core/Hidden";
-const API_URL = "https://project-exercisetracker.vercel.app";
+const API_URL = "https://zen-davinci-3e41d3.netlify.app/.netlify/functions";
 //window.location.hostname === "localhost"
 //? "http://localhost:1337"
 // : "https://travel-log-hazel.vercel.app"; // CHANGE WHEN HOSTING
@@ -53,11 +53,10 @@ export default function RegularForms() {
     });
   };
   // Get all Logs
-  // Add between dates and number to return  GET /api/exercise/log?userId=1234&from=2018-01-01&to=2018-07-23&limit=100
   const getLogs = (e) => {
     e.preventDefault();
     axios
-      .get(`${API_URL}/api/exercise/log?userId=${getLogsById.id}`)
+      .get(`${API_URL}/api/log?userId=${getLogsById.id}`)
       .then(function showUserInfo(res) {
         console.log(res);
         setLogsFound(res.data.log); //{activity: "TestSession"  date: "2020-11-05T00:00:00.000Z";   duration: 20;}
@@ -70,7 +69,7 @@ export default function RegularForms() {
     setNewUserId("");
     e.preventDefault();
     axios
-      .post(`${API_URL}/api/exercise/new-user`, { username: userFormData.name })
+      .post(`${API_URL}/api/new-user`, { username: userFormData.name })
       .then(function showUserInfo(res) {
         setNewUserName(res.data.username);
         setNewUserId(res.data._id);
@@ -83,12 +82,9 @@ export default function RegularForms() {
   // Submit Exercise to logs
   const submitExercise = (e) => {
     setSuccessNewExercise("");
-    // Wipe any previous data
-    //setNewUserName("");
-    // setNewUserId("");
     e.preventDefault();
     axios
-      .post(`${API_URL}/api/exercise/add`, {
+      .post(`${API_URL}/api/add`, {
         userId: exerciseFormData.userId,
         description: exerciseFormData.description,
         duration: exerciseFormData.duration,
